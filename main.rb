@@ -25,10 +25,14 @@ post '/sign-in' do
 		session[:user_id] = @user.id 
 		redirect '/dashboard'
 	else
-		"Failed."
+		redirect 'signup'
 	end
 end
 
 get '/dashboard' do 
 	erb :dashboard
+end
+
+get '/signup' do
+	erb :signup
 end
