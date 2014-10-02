@@ -36,6 +36,12 @@ post '/sign-up' do
 	redirect '/dashboard'
 end
 
+post '/speak' do
+	@post = Post.new(params[:post])
+	@post.save
+	"You Made It"
+end
+
 get '/dashboard' do 
 	erb :dashboard
 end
