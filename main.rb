@@ -19,3 +19,16 @@ get '/' do
 	
 end
 
+post '/sign-in' do 
+	@user = User.where(username: params[:username]).first
+	if @user && @user.password == params[:password]
+		session[:user_id] = @user.id 
+		redirect '/dashboard'
+	else
+		"Failed."
+	end
+end
+
+get '/dashboard' do 
+	erb :dashboard
+end
