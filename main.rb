@@ -25,10 +25,26 @@ post '/sign-in' do
 		session[:user_id] = @user.id 
 		redirect '/dashboard'
 	else
-		"Failed."
+		redirect 'signup'
 	end
+end
+
+post '/sign-up' do
+	@user = User.new(params[:user])
+	@user.save
+	session[:user_id] = @user.id 
+	redirect '/dashboard'
 end
 
 get '/dashboard' do 
 	erb :dashboard
+end
+
+get '/signup' do
+	erb :signup
+end
+get '/logout' do
+	session[:user_id] = nil
+    'logged out'
+
 end
