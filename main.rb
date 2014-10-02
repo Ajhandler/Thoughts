@@ -8,6 +8,7 @@ set :database, "sqlite3:thoughts.sqlite3"
 enable :sessions
 set :sessions => true
 
+#Define Current user
 def current_user
 	if session[:user_id]
 		@current_user = User.find(session[:user_id])
@@ -19,6 +20,7 @@ get '/' do
 	
 end
 
+
 post '/sign-in' do 
 	@user = User.where(username: params[:username]).first
 	if @user && @user.password == params[:password]
@@ -29,6 +31,7 @@ post '/sign-in' do
 	end
 end
 
+
 post '/sign-up' do
 	@user = User.new(params[:user])
 	@user.save
@@ -36,13 +39,17 @@ post '/sign-up' do
 	redirect '/dashboard'
 end
 
+
 post '/speak' do
-	@post = Post.new(params[:post])
+	@post = Post.new(params[:think])
+	@post.user_id = current_user.id
 	@post.save
 	"You Made It"
 end
 
+
 get '/dashboard' do 
+	@posts = current_user.posts
 	erb :dashboard
 end
 

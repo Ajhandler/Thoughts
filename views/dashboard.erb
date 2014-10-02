@@ -1,7 +1,22 @@
 <%=current_user.username if current_user %>
 <button onclick="window.location.href = '/logout'">log out</button>
 
-<form method="POST" action ="/speak">
-	<label for="post">Thought:</label>
-	<input type="textarea" name="post" maxlength="150">
+<form method="post" action ="/speak">
+	<label for="title">Title:</label>
+	<input type="text" name="[think][title]" value="" placeholder="">
+	<label for="think">Thought:</label>
+	<input type="text" name="[think][post]" maxlength="150">
+	<input type="submit">
 </form>
+
+
+<ul>
+
+<% @posts.each do |i| 
+
+  	i = i[:post]
+  	%>
+	<li><%=i%></li>
+
+<% end %>
+</ul>
