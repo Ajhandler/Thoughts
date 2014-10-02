@@ -1,2 +1,7 @@
 <%=current_user.username if current_user %>
 <button onclick="window.location.href = '/logout'">log out</button>
+
+<form method="POST" action ="/speak">
+	<label for="post">Thought:</label>
+	<input type="textarea" name="post" maxlength="150">
+</form>
