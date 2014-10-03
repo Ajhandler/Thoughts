@@ -3,7 +3,8 @@ require 'sinatra/activerecord'
 require './models'
 
 
-set :database, "sqlite3:thoughts.sqlite3"
+configure(:development){set :
+database, "sqlite:///thoughts.sqlite3"}
 
 enable :sessions
 set :sessions => true
@@ -12,6 +13,13 @@ set :sessions => true
 def current_user
 	if session[:user_id]
 		@current_user = User.find(session[:user_id])
+	end
+end
+
+def users_id
+	User.all.each do |i|
+		@qi = i[:id]
+		puts @qi
 	end
 end
 
@@ -46,18 +54,23 @@ post '/speak' do
 	@post.save
 	"You Made It"
 end
-
-
 get '/dashboard' do 
 	@posts = current_user.posts
+	@all_users = User.all
 	erb :dashboard
 end
-
 get '/signup' do
 	erb :signup
 end
 get '/logout' do
 	session[:user_id] = nil
     'logged out'
-
 end
+
+get '/profile' do
+	@user_clicked = User.id
+end
+
+
+
+
