@@ -67,8 +67,12 @@ get '/logout' do
     'logged out'
 end
 
-get '/profile#{d}' do
-	@user_clicked = User.id
+get '/profile/:id' do
+	current = params[:id]
+	puts current
+	@clicked_user = User.find(current)
+	@displayed_user = @clicked_user.username
+
 end
 
 
