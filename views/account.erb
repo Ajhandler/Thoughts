@@ -1,0 +1,17 @@
+
+<h1>Edit Your Account Details</h1>
+<form method="POST" action="/change_user" name="Edit_Personal_Info">
+<label for="username">Username:
+<input type="text" name ="[user][username]" value="<%=@myaccount.username%>"><br />
+<label for="fname">First Name:
+<input type="text" name="[user][fname]" value="<%=@myaccount.fname%>"><br />
+<label for="lname">Last Name:
+<input type="text" name="[user][lname]" value="<%=@myaccount.lname%>"><br />
+<label for="email">Email:
+<input type="text" name="[user][email]" value="<%=@myaccount.email%>"><br />
+<label for="email">Password:
+<input type="text" name="[user][password]" value="<%=@myaccount.password%>"><br />
+<input type="submit">
+
+</form>
+

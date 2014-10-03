@@ -78,6 +78,19 @@ get '/profile/:id' do
 
 end
 
+get '/account' do
+	@myaccount = current_user
+	erb :account
+end
+
+post '/change_user' do
+	@change_account = current_user
+	@change_account.update_attributes(params[:user])
+	'It Worked'
+end
+
+
+
 
 
 
