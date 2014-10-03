@@ -23,8 +23,8 @@ end
 # 	end
 # end
 
-get '/' do 
-	erb :home
+get '/' do
+	erb :home, :layout => :layout_hp
 	
 end
 
@@ -62,7 +62,7 @@ get '/dashboard' do
 	erb :dashboard
 end
 get '/signup' do
-	erb :signup
+		erb :signup, :layout => :layout_hp
 end
 get '/logout' do
 	session[:user_id] = nil
