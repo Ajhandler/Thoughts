@@ -4,8 +4,7 @@ require 'sinatra/activerecord'
 require './models'
 
 
-configure(:development){set :
-database, "sqlite:///thoughts.sqlite3"}
+configure(:development){set :database, "sqlite3:thoughts.sqlite3"}
 
 enable :sessions
 set :sessions => true
