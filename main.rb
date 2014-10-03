@@ -16,12 +16,12 @@ def current_user
 	end
 end
 
-def users_id
-	User.all.each do |i|
-		@qi = i[:id]
-		puts @qi
-	end
-end
+# def users_id
+# 	User.all.each do |i|
+# 		@qi = i[:id]
+# 		puts @qi
+# 	end
+# end
 
 get '/' do 
 	erb :home
@@ -67,7 +67,7 @@ get '/logout' do
     'logged out'
 end
 
-get '/profile' do
+get '/profile#{d}' do
 	@user_clicked = User.id
 end
 

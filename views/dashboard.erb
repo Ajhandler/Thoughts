@@ -22,8 +22,10 @@
 
 <ul>
 <%  @all_users.each do |i| 
-  	i = i[:username] %>
-	<li><a href = "<% %>"><%=i%></a></li>
+  	f = i[:username] 
+  	d = i[:id] %>
+	<li><a href = "/profile<%=d%>"><%=f %><%=d%></a></li>
+
 <% end %>
 </ul>
 
