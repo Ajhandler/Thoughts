@@ -19,3 +19,13 @@
 <% end %>
 </ul>
 
+
+<ul>
+<%  @all_users.each do |i| 
+  	f = i[:username] 
+  	d = i[:id] %>
+	<li><a href = "/profile<%=d%>"><%=f %><%=d%></a></li>
+
+<% end %>
+</ul>
+
