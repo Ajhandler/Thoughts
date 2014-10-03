@@ -10,13 +10,12 @@
 </form>
 
 
+
+
 <ul>
-
-<% @posts.each do |i| 
-
-  	i = i[:post]
-  	%>
-	<li><%=i%></li>
-
+<%  @posts.each do |i| 
+  	i = i[:post] %>
+	<li><a href = "<% %>"><%=i%></a></li>
 <% end %>
 </ul>
+
