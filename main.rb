@@ -50,7 +50,9 @@ end
 
 post '/speak' do
 	@post = Post.new(params[:think])
+	 @post.current = Time.new
 	@post.user_id = current_user.id
+	# @post.current = Time.new
 	@post.save
 	"You Made It"
 end
@@ -71,7 +73,8 @@ get '/profile/:id' do
 	current = params[:id]
 	puts current
 	@clicked_user = User.find(current)
-	@displayed_user = @clicked_user.username
+	erb :profile
+	
 
 end
 

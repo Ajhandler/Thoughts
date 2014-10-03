@@ -1,1 +1,12 @@
-<%=@displayed_user%>
+<li><%=@clicked_user.username%></li>
+<li><%=@clicked_user.fname%></li>
+<li><%=@clicked_user.lname%></li>
+
+
+<ul>
+<%  @clicked_user.posts.each do |i| 
+  	b = i[:post] 
+  	t = i[:current] %>
+	<li><a href = "<% %>"><%=b%><%=t%></a></li>
+<% end %>
+</ul>

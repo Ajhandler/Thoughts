@@ -1,16 +1,56 @@
-<form method="post" action="/sign-up">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="<%= url('/css/normalize.css') %>" rel="stylesheet" type="text/css" />
+	<link href="<%= url('/css/style.css') %>" rel="stylesheet" type="text/css" />
+</head>
+<body class="full-img">
+	<div class="container">
+	<header>
+	<p class="lead">Please fill out the form to sign up</p>
+	</header>
+	<form class="tform signup" method="post" action="/sign-up">
+	<a href="/"class="ghost btn link">Sign Up</a>
+		<a href= "/signup"class="ghost btn link">Sign In</a>
+	<div class="inputs">
 	<label for="fname">First Name:</label>
+	<div>
 	<input type="text" name="[user][fname]">
+	</div>
 	<label for="lname">Last Name:</label>
+	<div>
 	<input type="text" name="[user][lname]">
+	</div>
+	<div>
 	<label for="email">Email</label>
+	</div>
+	<div>
 	<input type="text" name="[user][email]">
+	</div>
+	<div>
 	<label for="username">Username</label>
+	</div>
+	<div>
 	<input type="text" name="[user][username]">
+	</div>
+	<div>
 	<label for="password">Password</label>
+	</div>
+	<div>
 	<input type="text" name="[user][password]">
-	<input type="submit">
+	</div>
+	<div>
+	<input class="ghost btn" value="Sign Up" type="submit">
+	</div>
+	</div>
+</div>
 </form>
+</body>
+</html>
+
+
 
 
 

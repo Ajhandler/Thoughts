@@ -1,8 +1,42 @@
-<form method="post" action="/sign-in">
-	<label for="username">Username</label>
-	<input type="text" name="username">
-	<label for="password">Password</label>
-	<input type="text" name="password">
-	<input type="submit">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Thoughts</title>
+	<link href="<%= url('/css/normalize.css') %>" rel="stylesheet" type="text/css" />
+	<link href="<%= url('/css/style.css') %>" rel="stylesheet" type="text/css" />
+</head>
+<body class="full-img">
+	<div class="container">
+		<header>
+			<h1 class="intro">Thoughts</h1>
+			<p class="lead">This is thoughts, Share what you think with friends.</p>
+		</header>
+		<form class="tform login" method="post" action="/sign-in">
+			<a href="/"class="ghost btn link">Sign Up</a>
+			<a href= "/signup"class="ghost btn link">Sign In</a>
+			<div class="inputs">
+			<label for="username">Username</label>
+			<div>
+			<input type="text" name="username">
+			</div>
+			<div>
+			<label for="password">Password</label>
+			</div>
+			<div>
+			<input type="text" name="password">
+			</div>
+			<input class="ghost btn" type="submit">
+			<div>
+		</form>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
 

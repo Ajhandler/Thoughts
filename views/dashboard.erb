@@ -14,8 +14,9 @@
 
 <ul>
 <%  @posts.each do |i| 
-  	i = i[:post] %>
-	<li><a href = "<% %>"><%=i%></a></li>
+  	b = i[:post] 
+  	t = i[:current] %>
+	<li><a href = "<% %>"><%=b%><%=t%></a></li>
 <% end %>
 </ul>
 

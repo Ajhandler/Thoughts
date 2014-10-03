@@ -1,0 +1,65 @@
+/* General Styles */
+.container{
+	max-width: 90%;
+	height: 100%;
+	margin: 0 auto;
+
+}
+.full-img{
+	width: 100%;
+	height: 100%;
+	color: rgba(252,255,245,1);
+	background-image: url('../img/backgr.jpg');
+	background-size: cover;
+}
+
+/* Form Syles */
+
+input{
+	border: 0;
+}
+.tform{
+	width: 40%;
+	height: 400px;
+	margin: 0 auto;
+	background: rgba(62,96,111,.40);
+	border: 5px solid rgba(252,255,245,1) ;
+	text-align: center;
+}
+
+.tform input[type=text]{
+	width: 70%;
+	outline: none;
+	border: 5px solid rgba(252,255,245,1);
+	background: none;
+	margin: 5% 0 5% 0;
+}
+
+.signup{
+	height: 650px;
+}
+
+.inputs{
+	margin-top: 10%;
+}
+  /* Form styles with buttons styles in them */
+  	.tform .btn{
+  		margin-top: 5%;
+  	}
+
+/* Btn Styles */
+.btn{
+	display: inline-block;
+	background: none;
+	outline: none;
+	box-shadow: none;
+}
+.ghost{
+ 	border: 3px solid rgba(252,255,245,1);
+ 	padding: 5px 10px;
+}
+
+.link{
+	text-decoration: none;
+	color: #fff
+}
